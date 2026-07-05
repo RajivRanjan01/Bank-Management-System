@@ -88,11 +88,12 @@ public class Login extends JFrame implements ActionListener {
         } else if (ae.getSource() == loginButton) {
             // Database validation logic will go here later
         } else if (ae.getSource() == signupButton) {
-            // Screen redirection logic will go here later
+            setVisible(false);
+            new SignupOne().setVisible(true);
         }
     }
 
-     public static void main(String[] args) {
+    public static void main(String[] args) {
         new Login();
     }
 }
