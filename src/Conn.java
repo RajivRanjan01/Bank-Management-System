@@ -1,0 +1,21 @@
+import java.sql.Connection;
+import java.sql.Statement;
+import java.sql.DriverManager;
+
+
+public class Conn {
+Connection c;
+Statement s;
+ public Conn(){
+    try {
+     Class.forName("com.sql.cj.jdbc.Driver");
+
+     c = DriverManager.getConnection("jdbc:mysql:///bankmanagementsystem", "root", "root@123");
+     s = c.createStatement();
+    }
+    catch (Exception e){
+     System.out.println(e);
+    }
+
+ }
+}
